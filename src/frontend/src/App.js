@@ -1,18 +1,24 @@
 import './App.css';
 import { TeamPage } from './pages/TeamPage';
-import {BrowserRouter as Router, Route } from 'react-router-dom'
+import {BrowserRouter as Router, Route , Switch } from 'react-router-dom'
+import { MatchPage } from './pages/MatchPage';
 
 function App() {
   return (
-    <Router>
+    
     <div className="App">
-      
-        <Route path="/teams/:teamName" component={TeamPage} >
-          
+      <Router>
+      <Switch>
+        <Route exact path="/teams/:teamName" >
+          <TeamPage />
         </Route>
-      
+        <Route path="/teams/:teamName/matches/:year" >
+          <MatchPage />
+        </Route>
+      </Switch>
+      </Router>
     </div>
-    </Router>
+    
   );
 }
 
