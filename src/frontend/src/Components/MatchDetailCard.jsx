@@ -8,7 +8,6 @@ export const MatchDetailCard = ({ teamName, match }) => {
         : match.team1;
     const otherTeamRoute = `/teams/${otherTeam}`;
     const isMatchWon = teamName === match.matchWinner;
-    console.log(isMatchWon);
     return (
         <div className={ isMatchWon ? "MatchDetailCard won-card" : 'MatchDetailCard lost-card'}>
             <div  >

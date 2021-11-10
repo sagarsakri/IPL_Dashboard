@@ -14,7 +14,6 @@ export const TeamPage = () => {
         const fetchMatches = async () => {
             const response = await fetch(`http://localhost:8080/team/${teamName}`);
             const data = await response.json();
-            console.log(data);
             setTeam(data)
         };
         fetchMatches();
@@ -25,7 +24,6 @@ export const TeamPage = () => {
     if (!team || !team.teamName) {
         return <h2>Team Not Found</h2>
     }
-    console.log(team);
     return (
 
         <div className="TeamPage">
