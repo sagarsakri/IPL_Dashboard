@@ -1,0 +1,24 @@
+.HomePage{
+    .team-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        & > div {
+            // justify-self: center;
+            // align-self: center;
+            text-align: center;
+            height: 85px;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+    }
+    .app-Name{
+        font-size: 4em;
+        font-weight:bold;
+        color: lawngreen;
+        text-align: center;
+        margin: 20px auto;
+
+    }
+}
